@@ -1,10 +1,15 @@
 require_relative 'messages'
+require_relative 'player'
+require_relative 'computer'
+require_relative 'board'
 require 'pry'
 
 class BattleShip
-  attr_reader :messages
+  attr_reader :messages, :player, :computer
   def initialize
     @messages = Messages.new
+    @player = Player.new(Board.new(4))
+    @computer = Computer.new(Board.new(4))
   end
 
   def welcome
@@ -33,7 +38,10 @@ class BattleShip
   def start_game
     puts messages.placement_restrictions
     #generate computer board
-    puts messages.placement_first_ship
+    puts messages.placement_computer_ship
+    puts messages.placement_two_unit_ship
+    player_ships #<============
+    # binding.pry
     #input for 2unit ship then fetches 2 unit ship
     first_ship_request = gets.chomp.upcase
     #now split that into coordinates into the player board
@@ -41,6 +49,7 @@ class BattleShip
     #also split that into coordinates into the player board
     puts "ENTERING GAME FLOW" #go to a new method
   end
+
 end
 
 # if __FILE__ == $0

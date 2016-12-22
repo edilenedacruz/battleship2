@@ -21,14 +21,18 @@ class Messages
   end
 
   def placement_restrictions
-    "Here be some rules fer yer ships:\nShips cannot wrap around th' board\nShip canna overlap\nShips can be laid either port t' starboard or top t' bottom\nCoordinates must correspond t' th' first an' last units o' th' ship. (IE: Ye canna place a two unit ship at 'A1 A3')\n\----------------------------------"
+    "Here be some rules fer yer ships:\nShips cannot wrap around th' board\nShip canna overlap\nShips can be laid either port t' starboard or top t' bottom\nCoordinates must correspond t' th' first an' last units o' th' ship. (IE: Ye canna place a two unit ship at 'A1 A3')\n\n\n"
   end
 
-  def placement_first_ship
-    "I be havin' laid ou' me ships on th' grid.\nYe now need t' layout yer two ships.\nTh' first be two units long an' th' second be three units long.\nTh' grid has A1 at th' top port an' D4 at th' bottom starboard.\nYa scallywag!\nEnter th' squares fer th' two-unit ship:"
+  def placement_computer_ship
+    "I be havin' laid ou' me ships on th' grid.\nYe now need t' layout yer two ships.\nTh' first be two units long an' th' second be three units long.\nTh' grid has A1 at th' top port an' D4 at th' bottom starboard.\n"
+  end
+
+  def placement_two_unit_ship
+    "Ya scallywag!\nEnter th' squares fer th' small ship (IE: A1 A2)"
+  end
+
+  def placement_three_unit_ship
+    "Ya scallywag!\nEnter th' squares fer th' big ship (IE: A1 A3)"
   end
 end
-
-#http://www.battleshiponline.org/how-to-play-battleship.php
-#http://www.playcrossbones.com/Pirate_Talk.php#sthash.j4S6ebJT.dpbs
-#http://www.syddware.com/cgi-bin/pirate.pl

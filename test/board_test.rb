@@ -21,11 +21,12 @@ class BoardTest < Minitest::Test
 
   def test_it_can_be_given_different_value
     board.change_value([2, 2], "M")
+    # binding.pry
     assert_equal "M", board.grid[2][2]
   end
 
   def test_it_can_print_full_board
-    assert_equal "===========\n. 1 2 3 4  \nA          \nB          \nC          \nD          \n===========\n", board.full_board
+    assert_equal "===========\n. 1 2 3 4\nA    \nB    \nC    \nD    \n===========", board.full_board
   end
 
   def test_it_can_change_value_to_s_for_ship
